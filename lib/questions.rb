@@ -34,6 +34,13 @@ end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+  a = []
+  array.each do |x|
+    if x != nil && x != false
+      a << x
+    end
+  end
+  a
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
