@@ -74,13 +74,15 @@ end
 # sort an array of words by their last letter, e.g.
 # ['sky', 'puma', 'maker'] becomes ['puma', 'maker', 'sky']
 def array_sort_by_last_letter_of_word(array)
+  array.sort_by {|word| word[-1]}
 end
 
 # cut strings in half, and return the first half, e.g.
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
-  half = string.length / 2
+  half = (string.length / 2.to_f).ceil
+  string[0, half]
 end
 
 # turn a positive integer into a negative integer. A negative integer
