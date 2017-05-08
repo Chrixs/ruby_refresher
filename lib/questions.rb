@@ -117,6 +117,13 @@ end
 # e.g. 'bob'. So in the array ['bob', 'radar', 'eat'], there
 # are 2 palindromes (bob and radar), so the method should return 2
 def number_of_elements_that_are_palindromes(array)
+  count = 0
+  array.each do |x|
+    if x == x.reverse
+      count += 1
+    end
+  end
+  return count
 end
 
 # return the shortest word in an array
